@@ -26,11 +26,11 @@ author:
   avatar           : "profile.png"
   name             : "Yunfan (Ryan) Xie"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "HKUST Computer Engineering 2028"
   location         : "Hong Kong"
   employer         : "The Hong Kong University of Science and Technology"
   uri              : # URL
-  email            : "yxiecc@connect.ust.hk / yunfanxie@outlook.com" 
+  email            : "yxiecc@connect.ust.hk" 
 
   # # Academic websites
   # academia         : # URL
@@ -39,35 +39,14 @@ author:
 
 
   # Repositories and software development
-  github           : "https://github.com/ryanyunfanxie"
+  github           : "ryanyunfanxie"
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
-  linkedin         : # Username
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
+  instagram        : "ryanyunfanxie"
+  # linkedin         : # Username
+  # youtube          : # Username
+  # zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
