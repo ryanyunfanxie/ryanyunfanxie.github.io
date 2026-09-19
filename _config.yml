@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Homepage"
+title                    : "Yunfan Xie"
 title_separator          : "-"
 name                     : &name "Yunfan (Ryan) Xie"
-description              : &description "Ryan's homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Yunfan (Ryan) Xie — Computer Engineering at HKUST. Embedded systems, robotics, edge AI, and software development."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://ryanyunfanxie.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,7 +23,7 @@ repository               : "ryanyunfanxie/ryanyunfanxie.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "monogram.svg"
   name             : "Yunfan (Ryan) Xie"
   pronouns         : # example: "she/her"  
   bio              : "HKUST Computer Engineering 2028"
@@ -40,7 +40,7 @@ author:
 
   # Repositories and software development
   github           : "ryanyunfanxie"
-  stackoverflow    : "13997049"
+  stackoverflow    :
 
   # Social media
   instagram        : "ryanyunfanxie"
@@ -91,7 +91,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -110,13 +110,14 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_description           : *description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
+  type                   : Person
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+    - https://github.com/ryanyunfanxie
 
 
 # Analytics
@@ -131,7 +132,44 @@ include:
   - .htaccess
   - _pages
   - files
+# Keep template examples in source, but never publish them as personal work.
 exclude:
+  - AGENTS.md
+  - README.md
+  - CONTRIBUTING.md
+  - scripts
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - _posts
+  - _publications
+  - _talks
+  - _teaching
+  - _portfolio
+  - files/bibtex1.bib
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - files/slides1.pdf
+  - files/slides2.pdf
+  - files/slides3.pdf
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/publications.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -268,7 +306,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Hong_Kong # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -325,3 +363,6 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Public downloadable resume, shared by the homepage, projects, and CV.
+resume_path: /files/resume_ryanyunfanxie_en.pdf

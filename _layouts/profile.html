@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main" class="profile-layout">
+  <aside class="profile-sidebar" aria-label="About Yunfan Xie">
+    <a class="profile-mark" href="{{ '/' | relative_url }}" aria-label="Yunfan Xie home">YX<span aria-hidden="true">.</span></a>
+    <p class="profile-name">Yunfan (Ryan) Xie</p>
+    <p class="profile-role">Computer Engineering<br>HKUST · Class of 2028</p>
+    <p class="profile-location">Hong Kong</p>
+    <div class="profile-links">
+      <a href="mailto:{{ site.author.email }}">Email <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="{{ site.resume_path | relative_url }}">Résumé <span class="file-label">PDF</span></a>
+    </div>
+    <p class="profile-note">Interested in research opportunities and internships.</p>
+  </aside>
+  <article class="profile-content">
+    <header class="profile-heading">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="profile-subtitle">{{ page.subtitle }}</p>{% endif %}
+    </header>
+    {{ content }}
+  </article>
+</main>
