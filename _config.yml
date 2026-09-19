@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "HKUST Computer Engineering 2028"
   location         : "Hong Kong"
-  employer         : "The Hong Kong University of Science and Technology"
+  employer         : "HKUST"
   uri              : # URL
   email            : "yxiecc@connect.ust.hk" 
 
@@ -40,7 +40,7 @@ author:
 
   # Repositories and software development
   github           : "ryanyunfanxie"
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  stackoverflow    : "13997049"
 
   # Social media
   instagram        : "ryanyunfanxie"
