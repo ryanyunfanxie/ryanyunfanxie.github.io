@@ -1,21 +1,14 @@
-{% include base_path %}
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Page sections">
-        <button aria-label="Toggle navigation menu"><span class="navicon"></span></button>
-        <ul class="visible-links">
-          {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item">
-              <a href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" tabindex="0" aria-label="Toggle color theme" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div>
+<header class="masthead">
+  <nav class="masthead__inner" aria-label="Page sections">
+    <ul class="nav-links">
+      {% for link in site.data.navigation.main %}
+      <li{% if forloop.index > 2 %} class="nav-link--secondary"{% endif %}><a href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+      <li><button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle color theme"><span id="theme-icon" aria-hidden="true">◐</span></button></li>
+      <li><button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">☰</span></button></li>
+    </ul>
+    <ul id="mobile-menu" class="mobile-menu" hidden>
+      {% for link in site.data.navigation.main offset:2 %}<li><a href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}{{ link.url }}">{{ link.title }}</a></li>{% endfor %}
+    </ul>
+  </nav>
+</header>

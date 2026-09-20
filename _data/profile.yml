@@ -4,36 +4,20 @@ education:
   degree: BEng in Computer Engineering
   period: 2024–Present
   focus: Minor in Robotics · Extended Major in Artificial Intelligence
-  cga: "3.816 / 4.3"
-  major_cga: "3.900 / 4.3"
-  coursework:
-    - Data Structures & Algorithms
-    - Embedded Systems
-    - Robotics Foundations
-    - Computer Architecture
-    - Control Systems
-    - C++ Programming
 
-interests:
-  - Embedded systems
-  - Robotics & control
-  - Edge AI
-  - Algorithms
+interests: Aerial robotics and embedded systems
 
 projects:
   - id: terralix
     name: Terralix Smart Ski Project
-    category: Edge AI & perception
     role: Software Developer
     period: 2026–Present
     summary: Bringing AI to the slopes through on-device computing and terrain perception.
     highlights:
       - Deployed models on the RK3588 board for edge AI computing.
       - Exploring LiDAR-based algorithms for snow terrain recognition.
-    tags: [RK3588, Edge AI, LiDAR]
   - id: robomaster
     name: HKUST RoboMaster Team ENTERPRIZE
-    category: Embedded systems & robotics
     role: Embedded Development
     period: 2025–Present
     summary: Developing the embedded control system for an autonomous Sentry robot.
@@ -41,18 +25,15 @@ projects:
       - Led embedded development for the Sentry robot, creating core control logic for autonomous decision-making and developing algorithms for navigation and target tracking.
       - Improved IMU fusion and AHRS algorithms, reducing response latency by 60% and increasing control precision by 30%.
       - Collaborated with mechanical and hardware teams to integrate sensors and motors.
-    tags: [Embedded Control, IMU Fusion, AHRS, Sensor Integration]
   - id: ustleaf
     name: USTLeaf
-    category: Full-stack development
     role: Full-Stack Developer
     period: 2024–2025
     summary: A community platform for discovering and documenting plant species on the HKUST campus.
     highlights:
-      - Built and deployed ustleaf.com with peers, cataloging campus plant species with photographs and detailed information.
+      - Built and deployed ustleaf.cloud with peers, cataloging campus plant species with photographs and detailed information.
       - Added community features for photo uploads, comments, and likes.
-    tags: [Web Development, Community Platform]
-    url: https://ustleaf.com
+    url: https://ustleaf.cloud
     link_label: Visit USTLeaf
 
 skills:

@@ -1,14 +1,13 @@
 <div class="project-list">
   {% for project in site.data.profile.projects %}
   <section class="project-entry" id="{{ project.id }}">
-    <div class="entry-topline"><span class="eyebrow">{{ project.category }}</span><span class="entry-date">{{ project.period }}</span></div>
+    <div class="entry-topline"><span class="entry-date">{{ project.period }}</span></div>
     <h{{ include.heading | default: 3 }}>{% if include.detailed %}{{ project.name }}{% else %}<a href="#{{ project.id }}">{{ project.name }}</a>{% endif %}</h{{ include.heading | default: 3 }}>
     <p class="entry-role">{{ project.role }}</p>
     <p>{{ project.summary }}</p>
     {% if include.detailed %}
     <ul class="project-highlights">{% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}</ul>
     {% endif %}
-    <ul class="tag-list" aria-label="Technologies and topics">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
     {% if include.detailed and project.url %}<a class="text-link" href="{{ project.url }}">{{ project.link_label }} <span aria-hidden="true">↗</span></a>{% endif %}
   </section>
   {% endfor %}

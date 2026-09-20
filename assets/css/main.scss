@@ -1,41 +1,244 @@
 ---
 ---
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
+:root {
+  --bg: #fff;
+  --text: #111;
+  --muted: #606060;
+  --border: #d8d8d8;
+  --inverse-bg: #000;
+  --inverse-text: #fff;
+}
 
-@import
-    "vendor/breakpoint/breakpoint",
+html[data-theme="dark"] {
+  --bg: #000;
+  --text: #f5f5f5;
+  --muted: #aaa;
+  --border: #333;
+  --inverse-bg: #fff;
+  --inverse-text: #000;
+}
 
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; font-size: 18px; }
+body {
+  margin: 0;
+  padding-top: 60px;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+button, input, textarea, select { font: inherit; }
+a { color: var(--text); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, h3, p, ul, dl { margin-top: 0; }
+h1, h2, h3 { line-height: 1.35; }
+h1 { font-weight: 700; }
+h2, h3, strong, b { font-weight: 400; }
+::selection { color: #fff; background: #000; }
+::-moz-selection { color: #fff; background: #000; }
+html[data-theme="dark"] ::selection { color: #000; background: #fff; }
+html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
+:focus-visible { outline: 3px solid var(--text); outline-offset: 4px; }
+[hidden] { display: none !important; }
 
-    "include/mixins",
-    "vendor/susy/susy",
+.masthead {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  height: 60px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.masthead__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(1160px, 100%);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.nav-links, .mobile-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-links a, .mobile-menu a { font-size: 0.9rem; text-decoration: none; }
+.nav-links a:hover, .mobile-menu a:hover { text-decoration: underline; }
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.menu-toggle { display: none; font-size: 1.5rem; }
+.mobile-menu {
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 22px;
+  display: none;
+  width: 180px;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.mobile-menu a { display: block; padding: 0.55rem 0.7rem; }
 
-    "layout/reset",
-    "layout/base",
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.65rem 1rem;
+  color: var(--inverse-text);
+  background: var(--inverse-bg);
+}
+.skip-link:focus { top: 0.5rem; }
 
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
+.profile-layout {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 3.2rem 30px 0;
+}
+.profile-overview {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.profile-photo {
+  display: block;
+  width: 120px;
+  height: 144px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+}
+.profile-identity { min-width: 0; }
+.profile-name { margin-bottom: 0.35rem; font-size: 1.35rem; font-weight: 700; }
+.profile-bio { max-width: 620px; margin: 0.8rem 0 0; font-size: 0.98rem; line-height: 1.65; }
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+}
+.profile-links a { display: inline-flex; gap: 0.45rem; text-decoration: none; }
+.profile-links a:hover { text-decoration: underline; }
+.profile-content { min-width: 0; font-size: 1rem; }
+.profile-content p { margin-bottom: 1rem; }
+.profile-section { margin-top: 3.4rem; }
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.15rem;
+}
+.section-heading h2 { margin: 0; font-size: 1.45rem; font-weight: 400; }
+.eyebrow {
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.entry-topline {
+  display: flex;
+  justify-content: flex-end;
+}
+.entry-date { flex-shrink: 0; color: var(--muted); font-size: 0.82rem; }
+.project-entry { padding: 1.3rem 0; }
+.project-entry:first-child { padding-top: 0.35rem; }
+.project-entry:last-child { padding-bottom: 0; }
+.project-entry h3 { margin: 0.4rem 0 0.3rem; font-size: 1.12rem; font-weight: 400; }
+.project-entry p { margin-bottom: 0.75rem; }
+.entry-role { color: var(--muted); font-size: 0.88rem; }
+.project-highlights { margin: 0.8rem 0; padding-left: 1.2rem; }
+.project-highlights li { margin-bottom: 0.45rem; }
+.text-link { display: inline-block; margin-top: 0.9rem; font-size: 0.92rem; font-weight: 400; }
+.education-degree { margin-bottom: 0.2rem !important; }
+.muted { color: var(--muted); }
+.small-heading { margin: 1.4rem 0 0.55rem; font-size: 1rem; font-weight: 400; }
+.skills-list { margin: 0; }
+.skills-list div { display: grid; grid-template-columns: 155px 1fr; gap: 1rem; margin-bottom: 0.85rem; }
+.skills-list dt { font-weight: 400; }
+.skills-list dd { margin: 0; }
+.recognition-list { margin: 0; padding: 0; list-style: none; }
+.recognition-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 0.65rem 0; }
+.award-name { font-size: 1rem; font-weight: 400; }
+.recognition-list .muted { display: block; font-size: 0.88rem; }
 
-    "layout/forms",
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  width: min(960px, calc(100% - 60px));
+  margin: 5rem auto 0;
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.page-footer p { margin: 0; }
+.page-footer a { color: inherit; }
+.not-found { width: min(720px, calc(100% - 44px)); min-height: 65vh; margin: 0 auto; padding-top: 5rem; }
+.not-found h1 { font-size: 2.2rem; }
 
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv"
-;
+@media (max-width: 900px) {
+  .profile-layout { padding-right: 24px; padding-left: 24px; }
+  .profile-overview { grid-template-columns: 100px minmax(0, 1fr); }
+  .profile-photo { width: 100px; height: 120px; }
+  .profile-links { grid-column: 1 / -1; justify-content: flex-start; }
+}
 
-@import "layout/profile";
+@media (max-width: 650px) {
+  html { scroll-padding-top: 75px; }
+  .masthead__inner { padding: 0 15px; }
+  .nav-links { width: 100%; gap: 1.65rem; }
+  .nav-links li:nth-last-child(2) { margin-left: auto; }
+  .nav-link--secondary { display: none; }
+  .menu-toggle { display: inline-grid; }
+  .mobile-menu:not([hidden]) { display: flex; }
+  .profile-layout { padding: 2rem 22px 0; }
+  .profile-overview { grid-template-columns: 80px minmax(0, 1fr); gap: 1rem; margin-bottom: 2.4rem; }
+  .profile-photo { width: 80px; height: 100px; }
+  .profile-name { margin-bottom: 0; font-size: 1.15rem; }
+  .profile-bio { margin-top: 0.55rem; font-size: 0.95rem; }
+  .profile-links { gap: 0.4rem 1.3rem; font-size: 0.95rem; }
+  .profile-content { font-size: 1rem; }
+  .profile-section { margin-top: 2.7rem; }
+  .section-heading h2 { font-size: 1.4rem; }
+  .skills-list div { grid-template-columns: 1fr; gap: 0.2rem; }
+  .recognition-list li { flex-wrap: wrap; gap: 0.15rem; }
+  .recognition-list .entry-date { flex-basis: 100%; }
+  .page-footer { display: block; width: calc(100% - 44px); }
+  .page-footer p + p { margin-top: 0.4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

@@ -3,24 +3,25 @@ layout: default
 ---
 <a class="skip-link" href="#main">Skip to content</a>
 <main id="main" class="profile-layout">
-  <aside class="profile-sidebar" aria-label="About Yunfan Xie">
-    <a class="profile-mark" href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}#about" aria-label="Back to introduction">YX<span aria-hidden="true">.</span></a>
-    <p class="profile-name">Yunfan (Ryan) Xie</p>
-    <p class="profile-role">Computer Engineering<br>HKUST · Class of 2028</p>
-    <p class="profile-location">Hong Kong</p>
+  <section class="profile-overview" id="about" aria-label="About Yunfan Xie (Ryan)">
+    <a class="profile-photo" href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}#about" aria-label="Back to introduction">
+      <img src="{{ '/images/profile-photo.png' | relative_url }}" alt="Portrait of Yunfan Xie (Ryan)" fetchpriority="high">
+    </a>
+    <div class="profile-identity">
+      <h1 class="profile-name">Yunfan Xie (Ryan)</h1>
+      <p class="profile-bio">I’m a Computer Engineering undergraduate at the Hong Kong University of Science and Technology, with a minor in Robotics and an extended major in Artificial Intelligence. I enjoy turning algorithms into working systems: developing autonomous robot control and deploying AI models on embedded hardware. I’m open to new challenges and research or internship opportunities.</p>
+    </div>
     <div class="profile-links">
       <a href="mailto:{{ site.author.email }}">Email <span aria-hidden="true">↗</span></a>
       <a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>
-      <a href="{{ site.resume_path | relative_url }}">Résumé <span class="file-label">PDF</span></a>
     </div>
-    <p class="profile-note">Interested in research opportunities and internships.</p>
-  </aside>
+  </section>
   <article class="profile-content">
-    <header class="profile-heading" id="about">
+    {% if page.eyebrow or page.title or page.subtitle %}<header class="profile-heading">
       <p class="eyebrow">{{ page.eyebrow }}</p>
       <h1>{{ page.title }}</h1>
       {% if page.subtitle %}<p class="profile-subtitle">{{ page.subtitle }}</p>{% endif %}
-    </header>
+    </header>{% endif %}
     {{ content }}
   </article>
 </main>
