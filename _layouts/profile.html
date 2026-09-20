@@ -5,7 +5,7 @@ layout: default
 <main id="main" class="profile-layout">
   <section class="profile-overview" id="about" aria-label="About Yunfan Xie (Ryan)">
     <div class="profile-photo">
-      <img src="{{ '/images/profile-photo.png' | relative_url }}" alt="Portrait of Yunfan Xie (Ryan)" fetchpriority="high">
+      <img src="{{ '/images/profile-photo.webp' | relative_url }}" alt="Portrait of Yunfan Xie (Ryan)" width="600" height="800" decoding="async" fetchpriority="high">
     </div>
     <div class="profile-identity">
       <h1 class="profile-name">Yunfan Xie (Ryan)</h1>
@@ -16,10 +16,10 @@ layout: default
         <a href="{{ site.author.linkedin }}">LinkedIn</a>
         <a href="{{ site.author.cv | relative_url }}">CV</a>
       </div>
-      <p class="profile-bio">I’m a computer engineering undergraduate at <a href="{{ site.data.profile.education.url }}">The Hong Kong University of Science and Technology (HKUST)</a>, with a minor in Robotics and an extended major in AI. I enjoy turning algorithms into working systems: developing autonomous robot control and deploying AI models on embedded hardware.</p>
+      <p class="profile-bio">I’m a computer engineering undergraduate at <a href="{{ site.data.profile.education.url }}">The Hong Kong University of Science and Technology (HKUST)</a>, with a minor in Robotics and an extended major in AI. I enjoy turning algorithms into working systems: developing autonomous robot control and deploying AI models on embedded hardware. My research interests include aerial robots reinforcement learning.</p>
     </div>
   </section>
-  <p class="opportunity-note">I’m open to research and internship opportunities. If you are interested in collaboration, please feel free to contact me.</p>
+  <p class="opportunity-note">I will be exchanged to <a href="https://ee.ethz.ch/">Dept. of Information Technology and Electrical Engineering</a> of <a href="https://ethz.ch/">ETH Zurich</a> in 2027 Spring and i'm looking for research opportunities during exchange. If you are interested in collaboration, please feel free to contact me.</p>
   <article class="profile-content">
     {% if page.eyebrow or page.title or page.subtitle %}<header class="profile-heading">
       <p class="eyebrow">{{ page.eyebrow }}</p>

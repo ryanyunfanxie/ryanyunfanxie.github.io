@@ -3,7 +3,7 @@
   <section class="project-entry" id="{{ project.id }}">
     <span class="entry-date">{{ project.period }}</span>
     <div class="entry-content">
-      <h{{ include.heading | default: 3 }} class="entry-title">{{ project.role }}&#44; {{ project.name }}</h{{ include.heading | default: 3 }}>
+      <h{{ include.heading | default: 3 }} class="entry-title">{{ project.role }}&#44; {% if project.title_url %}<a href="{{ project.title_url }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</h{{ include.heading | default: 3 }}>
       <p class="entry-summary">{{ project.summary }} {% if include.detailed %}{% for highlight in project.highlights %}{{ highlight }} {% endfor %}{% endif %}{% if include.detailed and project.url %}<a class="text-link" href="{{ project.url }}">{{ project.link_label }}</a>{% endif %}</p>
     </div>
   </section>

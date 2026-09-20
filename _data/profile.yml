@@ -16,6 +16,7 @@ projects:
       - Exploring LiDAR-based algorithms for snow terrain recognition.
   - id: robomaster
     name: HKUST RoboMaster Team ENTERPRIZE
+    title_url: https://www.instagram.com/hkust_enterprize_robomaster/
     role: Embedded Developer
     period: 2025 – Present
     summary: Developing the embedded control system for an autonomous Sentry robot.
@@ -25,6 +26,7 @@ projects:
       - Collaborated with mechanical and hardware teams to integrate sensors and motors.
   - id: ustleaf
     name: USTLeaf
+    title_url: https://ustleaf.cloud
     role: Full-Stack Developer
     period: 2024 – 2025
     summary: A community platform for discovering and documenting plant species on the HKUST campus.
