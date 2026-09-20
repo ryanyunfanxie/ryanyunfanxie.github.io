@@ -1,25 +1,23 @@
 education:
   institution: The Hong Kong University of Science and Technology
   short_name: HKUST
-  degree: BEng in Computer Engineering
-  period: 2024–Present
-  focus: Minor in Robotics · Extended Major in Artificial Intelligence
-
-interests: Aerial robotics and embedded systems
+  url: https://hkust.edu.hk/
+  degree: B.Eng in Computer Engineering, Minor in Robotics, Extended Major in AI
+  period: 2024 – Present
 
 projects:
   - id: terralix
-    name: Terralix Smart Ski Project
+    name: Terralix Smart Ski Goggles
     role: Software Developer
-    period: 2026–Present
+    period: 2026 – Present
     summary: Bringing AI to the slopes through on-device computing and terrain perception.
     highlights:
       - Deployed models on the RK3588 board for edge AI computing.
       - Exploring LiDAR-based algorithms for snow terrain recognition.
   - id: robomaster
     name: HKUST RoboMaster Team ENTERPRIZE
-    role: Embedded Development
-    period: 2025–Present
+    role: Embedded Developer
+    period: 2025 – Present
     summary: Developing the embedded control system for an autonomous Sentry robot.
     highlights:
       - Led embedded development for the Sentry robot, creating core control logic for autonomous decision-making and developing algorithms for navigation and target tracking.
@@ -28,7 +26,7 @@ projects:
   - id: ustleaf
     name: USTLeaf
     role: Full-Stack Developer
-    period: 2024–2025
+    period: 2024 – 2025
     summary: A community platform for discovering and documenting plant species on the HKUST campus.
     highlights:
       - Built and deployed ustleaf.cloud with peers, cataloging campus plant species with photographs and detailed information.
@@ -45,13 +43,17 @@ skills:
     items: [Git, Linux, SolidWorks, VS Code, LaTeX, KiCad]
 
 awards:
-  - summary: HKUST Dean’s List (Top 1%)
-    period: 2024–Present
-  - summary: HKUST University Admission Scholarship
-    period: 2024–Present
-  - summary: HKUST Continuing UG Academic Scholarship
-    period: 2024–Present
-  - summary: NOIP First Prize
+  - summary: 3V3 Sentry Second Prize, RoboMaster RMUL 2026
+    period: "2026"
+  - summary: First Prize, RoboMaster RMUC 2026
+    period: "2026"
+  - summary: Dean’s List (Top 1%), HKUST
+    period: 2024 – Present
+  - summary: University Admission Scholarship, HKUST
+    period: 2024 – Present
+  - summary: Continuing UG Academic Scholarship, HKUST
+    period: 2024 – Present
+  - summary: First Prize, National Olympiad in Informatics in Provinces (NOIP)
     period: "2019"
 
 languages:

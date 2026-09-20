@@ -1,7 +1,7 @@
 main:
   - title: "About"
     url: "#about"
-  - title: "Projects"
+  - title: "Projects & Experience"
     url: "#projects"
   - title: "Education"
     url: "#education"

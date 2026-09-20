@@ -4,19 +4,22 @@ layout: default
 <a class="skip-link" href="#main">Skip to content</a>
 <main id="main" class="profile-layout">
   <section class="profile-overview" id="about" aria-label="About Yunfan Xie (Ryan)">
-    <a class="profile-photo" href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}#about" aria-label="Back to introduction">
+    <div class="profile-photo">
       <img src="{{ '/images/profile-photo.png' | relative_url }}" alt="Portrait of Yunfan Xie (Ryan)" fetchpriority="high">
-    </a>
+    </div>
     <div class="profile-identity">
       <h1 class="profile-name">Yunfan Xie (Ryan)</h1>
       <p class="profile-chinese-name" lang="zh-Hans">谢云帆</p>
-      <p class="profile-bio">I’m a Computer Engineering undergraduate at the Hong Kong University of Science and Technology, with a minor in Robotics and an extended major in Artificial Intelligence. I enjoy turning algorithms into working systems: developing autonomous robot control and deploying AI models on embedded hardware. I’m open to new challenges and research or internship opportunities.</p>
-    </div>
-    <div class="profile-links">
-      <a href="mailto:{{ site.author.email }}">Email <span aria-hidden="true">↗</span></a>
-      <a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>
+      <div class="profile-links">
+        <a href="mailto:{{ site.author.email }}">Email</a>
+        <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+        <a href="{{ site.author.linkedin }}">LinkedIn</a>
+        <a href="{{ site.author.cv | relative_url }}">CV</a>
+      </div>
+      <p class="profile-bio">I’m a computer engineering undergraduate at <a href="{{ site.data.profile.education.url }}">The Hong Kong University of Science and Technology (HKUST)</a>, with a minor in Robotics and an extended major in AI. I enjoy turning algorithms into working systems: developing autonomous robot control and deploying AI models on embedded hardware.</p>
     </div>
   </section>
+  <p class="opportunity-note">I’m open to research and internship opportunities. If you are interested in collaboration, please feel free to contact me.</p>
   <article class="profile-content">
     {% if page.eyebrow or page.title or page.subtitle %}<header class="profile-heading">
       <p class="eyebrow">{{ page.eyebrow }}</p>
