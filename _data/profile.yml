@@ -39,15 +39,21 @@ projects:
 skills:
   - name: Programming
     items: [C, C++, Python, MATLAB, JavaScript, HTML, CSS]
-  - name: Embedded & robotics
+  - name: Embedded & Robotics
     items: [STM32, Motor Control, ROS, Sensor Integration, Circuit Design]
   - name: Tools
     items: [Git, Linux, SolidWorks, VS Code, LaTeX, KiCad]
 
 awards:
-  - summary: 3V3 Sentry Second Prize, RoboMaster RMUL 2026
+  - summary: 3V3 Sentry Second Prize
+    linked_label: RoboMaster
+    linked_suffix: RMUL 2026
+    url: https://www.robomaster.com/
     period: "2026"
-  - summary: First Prize, RoboMaster RMUC 2026
+  - summary: First Prize
+    linked_label: RoboMaster
+    linked_suffix: RMUC 2026
+    url: https://www.robomaster.com/
     period: "2026"
   - summary: Dean’s List (Top 1%), HKUST
     period: 2024 – Present

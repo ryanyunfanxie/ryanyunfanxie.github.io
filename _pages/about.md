@@ -12,7 +12,7 @@ permalink: /
   <div class="section-heading"><h2 id="education-heading">Education</h2></div>
   <div class="education-entry">
     <span class="entry-date">{{ site.data.profile.education.period }}</span>
-    <h3 class="entry-title">{{ site.data.profile.education.degree }}&#44; <a href="{{ site.data.profile.education.url }}">{{ site.data.profile.education.institution }} &#40;{{ site.data.profile.education.short_name }}&#41;</a></h3>
+    <h3 class="entry-title">{{ site.data.profile.education.degree }}&#44; <a href="{{ site.data.profile.education.url }}" target="_blank" rel="noopener noreferrer">{{ site.data.profile.education.institution }} &#40;{{ site.data.profile.education.short_name }}&#41;</a></h3>
   </div>
 </section>
 
@@ -30,7 +30,7 @@ permalink: /
   <div class="section-heading"><h2 id="award-heading">Awards</h2></div>
   <ul class="recognition-list">
     {% for award in site.data.profile.awards %}
-    <li><span class="entry-date">{{ award.period }}</span><span>{{ award.summary }}</span></li>
+    <li><span class="entry-date">{{ award.period }}</span><span>{{ award.summary }}{% if award.url %}&#44; <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer">{{ award.linked_label }}</a> {{ award.linked_suffix }}{% endif %}</span></li>
     {% endfor %}
   </ul>
 </section>
