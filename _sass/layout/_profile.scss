@@ -15,7 +15,7 @@
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #16231f;
+  --global-bg-color: #000;
   --global-text-color: #e3ece6;
   --global-text-color-light: #a3b8ac;
   --global-link-color: #99d5b9;
@@ -23,19 +23,20 @@ html[data-theme="dark"] {
   --global-link-color-visited: #99d5b9;
   --global-masthead-link-color: #c0d2c7;
   --global-border-color: #354a3f;
-  --global-footer-bg-color: #1b2b24;
-  --profile-tint: #22372c;
+  --global-footer-bg-color: #000;
+  --profile-tint: #111;
   --profile-accent: #99d5b9;
-  --profile-button-text: #16231f;
+  --profile-button-text: #000;
 }
 
-html { scroll-padding-top: 100px; }
+html { scroll-padding-top: 100px; scroll-behavior: smooth; }
 body { line-height: 1.7; padding-bottom: 0; margin-bottom: 0 !important; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--profile-accent); outline-offset: 5px; }
 .masthead__inner-wrap { max-width: 1160px; }
 .masthead__menu-item--lg { letter-spacing: -0.035em; }
 .masthead__menu-item.selected a { pointer-events: auto; cursor: pointer; }
 .greedy-nav .visible-links a { font-size: 0.85rem; }
+.greedy-nav .visible-links li:first-child { font-weight: normal; }
 .page__footer { position: static; float: none; margin-top: 5rem; }
 .page__footer footer { max-width: 1160px; }
 .page__footer-copyright { line-height: 1.8; }

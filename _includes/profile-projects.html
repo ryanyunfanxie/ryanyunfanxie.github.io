@@ -2,7 +2,7 @@
   {% for project in site.data.profile.projects %}
   <section class="project-entry" id="{{ project.id }}">
     <div class="entry-topline"><span class="eyebrow">{{ project.category }}</span><span class="entry-date">{{ project.period }}</span></div>
-    <h{{ include.heading | default: 3 }}>{% if include.detailed %}{{ project.name }}{% else %}<a href="{{ '/projects/' | relative_url }}#{{ project.id }}">{{ project.name }}</a>{% endif %}</h{{ include.heading | default: 3 }}>
+    <h{{ include.heading | default: 3 }}>{% if include.detailed %}{{ project.name }}{% else %}<a href="#{{ project.id }}">{{ project.name }}</a>{% endif %}</h{{ include.heading | default: 3 }}>
     <p class="entry-role">{{ project.role }}</p>
     <p>{{ project.summary }}</p>
     {% if include.detailed %}

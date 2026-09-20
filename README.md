@@ -4,17 +4,15 @@ Personal academic website at https://ryanyunfanxie.github.io, built with Jekyll 
 
 ## Update content
 
-- `_data/profile.yml`: education, project experience, skills, awards, and languages. Shared by the homepage, project page, and CV.
-- `_pages/about.md`: introduction and homepage sections.
-- `_pages/projects.html`: detailed project page.
-- `_pages/cv.md`: web CV.
-- `_data/navigation.yml`: navigation links.
+- `_data/profile.yml`: education, project experience, skills, awards, and languages. Rendered together on the single-page homepage.
+- `_pages/about.md`: all homepage sections, including full project details, education, skills, awards, and contact.
+- `_data/navigation.yml`: same-page section anchors in the header.
 - `_config.yml`: site identity, email, resume path, and build settings.
 - `files/resume_ryanyunfanxie_en.pdf`: downloadable resume. Replace this file when updating the PDF.
 - `_sass/layout/_profile.scss`: personal layout and light/dark styles.
 - `_layouts/profile.html`: shared profile sidebar and page structure.
 
-Template sample posts, papers, talks, teaching entries, and guide pages are retained in source but excluded in `_config.yml`. Remove the relevant exclusions only after replacing those examples with real content. The old portfolio and JSON CV URLs redirect to the current projects and CV pages.
+Template sample posts, papers, talks, teaching entries, and guide pages are retained in source but excluded in `_config.yml`. Remove the relevant exclusions only after replacing those examples with real content. Legacy project, portfolio, CV, and sitemap URLs redirect to the homepage; they do not contain separate content pages. The PDF resume remains downloadable.
 
 ## Preview locally
 
