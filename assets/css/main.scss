@@ -38,10 +38,10 @@ h1, h2, h3, p, ul, dl { margin-top: 0; }
 h1, h2, h3 { line-height: var(--line-height); }
 h1 { font-weight: 700; }
 h2, h3, strong, b { font-weight: 400; }
-::selection { color: #fff; background: #000; }
-::-moz-selection { color: #fff; background: #000; }
-html[data-theme="dark"] ::selection { color: #000; background: #fff; }
-html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
+// ::selection { color: #fff; background: #000; }
+// ::-moz-selection { color: #fff; background: #000; }
+// html[data-theme="dark"] ::selection { color: #000; background: #fff; }
+// html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
 :focus-visible { outline: 3px solid var(--text); outline-offset: 4px; }
 [hidden] { display: none !important; }
 
