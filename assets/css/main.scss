@@ -3,8 +3,8 @@
 
 :root {
   --bg: #fff;
-  --text: #111;
-  --muted: #606060;
+  --text: #000;
+  --muted: #000;
   --border: #d8d8d8;
   --inverse-bg: #000;
   --inverse-text: #fff;
@@ -12,8 +12,8 @@
 
 html[data-theme="dark"] {
   --bg: #000;
-  --text: #f5f5f5;
-  --muted: #aaa;
+  --text: #fff;
+  --muted: #fff;
   --border: #333;
   --inverse-bg: #fff;
   --inverse-text: #000;
@@ -138,6 +138,7 @@ html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
 }
 .profile-identity { min-width: 0; }
 .profile-name { margin-bottom: 0.35rem; font-size: 1.35rem; font-weight: 700; }
+.profile-chinese-name { margin: -0.1rem 0 0.65rem; color: var(--muted); font-size: 1rem; font-weight: 400; }
 .profile-bio { max-width: 620px; margin: 0.8rem 0 0; font-size: 0.98rem; line-height: 1.65; }
 .profile-links {
   display: flex;
@@ -159,7 +160,7 @@ html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
   gap: 0.5rem 1rem;
   margin-bottom: 1.15rem;
 }
-.section-heading h2 { margin: 0; font-size: 1.45rem; font-weight: 400; }
+.section-heading h2 { margin: 0; font-size: 1.45rem; font-weight: 700; }
 .eyebrow {
   color: var(--text);
   font-size: 0.8rem;
@@ -167,31 +168,28 @@ html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.entry-topline {
-  display: flex;
-  justify-content: flex-end;
+.project-entry, .education-entry, .recognition-list li {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1.25rem;
 }
-.entry-date { flex-shrink: 0; color: var(--muted); font-size: 0.82rem; }
 .project-entry { padding: 1.3rem 0; }
 .project-entry:first-child { padding-top: 0.35rem; }
 .project-entry:last-child { padding-bottom: 0; }
-.project-entry h3 { margin: 0.4rem 0 0.3rem; font-size: 1.12rem; font-weight: 400; }
+.entry-date { font-size: 0.88rem; }
+.entry-content { min-width: 0; }
+.entry-title { margin: 0 0 0.75rem; font-size: 1.12rem; font-weight: 400; }
 .project-entry p { margin-bottom: 0.75rem; }
-.entry-role { color: var(--muted); font-size: 0.88rem; }
-.project-highlights { margin: 0.8rem 0; padding-left: 1.2rem; }
-.project-highlights li { margin-bottom: 0.45rem; }
+.entry-summary { line-height: 1.75; }
 .text-link { display: inline-block; margin-top: 0.9rem; font-size: 0.92rem; font-weight: 400; }
-.education-degree { margin-bottom: 0.2rem !important; }
 .muted { color: var(--muted); }
-.small-heading { margin: 1.4rem 0 0.55rem; font-size: 1rem; font-weight: 400; }
 .skills-list { margin: 0; }
 .skills-list div { display: grid; grid-template-columns: 155px 1fr; gap: 1rem; margin-bottom: 0.85rem; }
 .skills-list dt { font-weight: 400; }
 .skills-list dd { margin: 0; }
 .recognition-list { margin: 0; padding: 0; list-style: none; }
-.recognition-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 0.65rem 0; }
-.award-name { font-size: 1rem; font-weight: 400; }
-.recognition-list .muted { display: block; font-size: 0.88rem; }
+.recognition-list li { padding: 0.16rem 0; line-height: 1.5; }
 
 .page-footer {
   display: flex;
@@ -231,9 +229,8 @@ html[data-theme="dark"] ::-moz-selection { color: #000; background: #fff; }
   .profile-content { font-size: 1rem; }
   .profile-section { margin-top: 2.7rem; }
   .section-heading h2 { font-size: 1.4rem; }
+  .project-entry, .education-entry, .recognition-list li { grid-template-columns: 115px minmax(0, 1fr); gap: 0.75rem; }
   .skills-list div { grid-template-columns: 1fr; gap: 0.2rem; }
-  .recognition-list li { flex-wrap: wrap; gap: 0.15rem; }
-  .recognition-list .entry-date { flex-basis: 100%; }
   .page-footer { display: block; width: calc(100% - 44px); }
   .page-footer p + p { margin-top: 0.4rem; }
 }

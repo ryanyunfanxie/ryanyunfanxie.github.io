@@ -45,17 +45,13 @@ skills:
     items: [Git, Linux, SolidWorks, VS Code, LaTeX, KiCad]
 
 awards:
-  - name: Dean’s List (Top 1%)
-    institution: HKUST
+  - summary: HKUST Dean’s List (Top 1%)
     period: 2024–Present
-  - name: University Admission Scholarship
-    institution: HKUST
+  - summary: HKUST University Admission Scholarship
     period: 2024–Present
-  - name: Continuing UG Academic Scholarship
-    institution: HKUST
+  - summary: HKUST Continuing UG Academic Scholarship
     period: 2024–Present
-  - name: NOIP First Prize
-    institution: National Olympiad in Informatics in Provinces
+  - summary: NOIP First Prize
     period: "2019"
 
 languages:
