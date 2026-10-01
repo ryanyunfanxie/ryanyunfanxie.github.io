@@ -1,14 +1,12 @@
 (() => {
   const root = document.documentElement;
   const themeButton = document.querySelector('#theme-toggle');
-  const themeIcon = document.querySelector('#theme-icon');
   const menuButton = document.querySelector('#menu-toggle');
   const mobileMenu = document.querySelector('#mobile-menu');
   const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
   const setTheme = (theme) => {
     root.dataset.theme = theme;
-    themeIcon.textContent = theme === 'dark' ? '☾' : '☀';
   };
 
   setTheme(root.dataset.theme || (systemTheme.matches ? 'dark' : 'light'));
