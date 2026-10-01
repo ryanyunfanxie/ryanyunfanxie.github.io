@@ -234,7 +234,7 @@ html:not([data-theme="dark"]) .theme-icon__moon { display: none; }
 }
 
 @media (max-width: 650px) {
-  html { scroll-padding-top: 75px; }
+  html { scroll-padding-top: 75px; font-size: 16px; }
   .masthead__inner { padding: 0 15px; }
   .nav-links { width: 100%; gap: 0.8rem; }
   .nav-links a { font-size: 0.82rem; }
