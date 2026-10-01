@@ -4,8 +4,8 @@
       {% for link in site.data.navigation.main %}
       <li class="nav-link{% if forloop.index > 2 %} nav-link--secondary{% endif %}"><a href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
-      <li><button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle color theme"><span id="theme-icon" class="theme-icon" aria-hidden="true"><svg class="theme-icon__sun" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path></svg><svg class="theme-icon__moon" viewBox="0 0 24 24" focusable="false"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"></path></svg></span></button></li>
-      <li><button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></span></button></li>
+      <li><button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle color theme"><span id="theme-icon" class="theme-icon" aria-hidden="true"><img class="theme-icon__sun" src="{{ '/assets/icons/sun.svg' | relative_url }}" alt=""><img class="theme-icon__moon" src="{{ '/assets/icons/moon.svg' | relative_url }}" alt=""></span></button></li>
+      <li><button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-icon" aria-hidden="true"><img src="{{ '/assets/icons/menu.svg' | relative_url }}" alt=""></span></button></li>
     </ul>
     <ul id="mobile-menu" class="mobile-menu" hidden>
       {% for link in site.data.navigation.main %}<li><a href="{% unless page.url == '/' %}{{ '/' | relative_url }}{% endunless %}{{ link.url }}">{{ link.title }}</a></li>{% endfor %}
