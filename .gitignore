@@ -19,5 +19,13 @@ package-lock.json
 # Ignore folders related to IDEs
 .vscode/
 
+# Ignore LaTeX build artifacts in the CV directory
+CV/*.aux
+CV/*.fdb_latexmk
+CV/*.fls
+CV/*.log
+CV/*.out
+CV/*.synctex.gz
+
 # Ignore files created by MacOS
 .DS_Store

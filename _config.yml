@@ -23,12 +23,6 @@ exclude:
   - LICENSE
   - README.md
   - CV/ryanyunfanxie_CV_en.tex
-  - CV/ryanyunfanxie_CV_en.aux
-  - CV/ryanyunfanxie_CV_en.fdb_latexmk
-  - CV/ryanyunfanxie_CV_en.fls
-  - CV/ryanyunfanxie_CV_en.log
-  - CV/ryanyunfanxie_CV_en.out
-  - CV/ryanyunfanxie_CV_en.synctex.gz
   - local
   - vendor
 
