@@ -221,7 +221,7 @@ h2, h3, strong, b { font-weight: 400; }
   .nav-links { width: 100%; gap: 0.8rem; }
   .nav-links a { font-size: 0.82rem; }
   .nav-links li:nth-last-child(2) { margin-left: auto; }
-  .nav-link--secondary { display: none; }
+  .nav-links .nav-link { display: none; }
   .menu-toggle { display: inline-grid; }
   .mobile-menu:not([hidden]) { display: flex; }
   .profile-layout { padding: 2rem 22px 0; }
